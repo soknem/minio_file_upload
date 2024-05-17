@@ -11,6 +11,6 @@ minio:
   access-key: tX8ST2lo1qfz4GClMv0H
 springdoc:
   swagger-ui:
-    path: /
+    path: swagger
 server:
   port: 8888
