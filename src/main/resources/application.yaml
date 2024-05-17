@@ -1,5 +1,53 @@
+media:
+  server-path: ${MEDIA_SERVER_PATH}
+  #  client-path: /media/**
+  base-uri: ${MEDIA_BASE_URI}
+server:
+  port: ${SERVER_PORT}
+
+springdoc:
+  swagger-ui:
+    path: /
+  api-docs:
+    path: /v3/api-docs
+
+minio:
+  url: ${MINIO_URL}
+  secret-key: ${MINIO_SECRETE_KEY}
+  bucket-name: ${MINIO_BUCKET}
+  access-key: ${MINIO_ACCESS_KEY}
+
 spring:
   application:
-    name: min_io_test
+    name: "ISTAD-LMS"
+  servlet: # this is for file upload
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+#  datasource:
+#    username: ${DB_USERNAME}
+#    password: ${DB_PASSWORD}
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # or update
+    generate-ddl: true
+  security:
+    user:
+      name: ${SECURITY_NAME}
+      password: ${SECURITY_PASSWORD}
+  mail:
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    host: ${MAIL_HOST}
+    port: ${MAIL_HOST_PORT}
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
   profiles:
     active: dev

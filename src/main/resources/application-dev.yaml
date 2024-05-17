@@ -1,16 +1,30 @@
-spring:
-  servlet:
-    multipart:
-      max-file-size: 500MB
-      max-request-size: 500MB
+#DB_USERNAME: istadlms
+#DB_PASSWORD: ISTAD@LMS
+#DB_HOST: 152.42.220.220
+#DB_PORT: 5433
+#DB_NAME: istad_lms_db
+#
+#ACT_PRIVATE: access-refresh-token-keys/access-token-private.key
+#ACT_PUBLIC: access-refresh-token-keys/access-token-public.key
+## This is for the refresh token
+#RET_PRIVATE: access-refresh-token-keys/refresh-token-private.key
+#RET_PUBLIC: access-refresh-token-keys/refresh-token-public.key
 
-minio:
-  endpoint: http://152.42.220.220:9000
-  secret-key: jqnAdnc7YsqBqyhjsjdYkLHX5snYoRrVp1E8EiGB
-  bucket-name: minio-test-bucket-1
-  access-key: tX8ST2lo1qfz4GClMv0H
-springdoc:
-  swagger-ui:
-    path: swagger
-server:
-  port: 8888
+SERVER_PORT: 8888
+
+MAIL_USERNAME: sokname56@gmail.com
+MAIL_PASSWORD: ehis ldbm otct hykc
+MAIL_HOST: smtp.gmail.com
+MAIL_HOST_PORT: 587
+
+SECURITY_NAME: soknem
+SECURITY_PASSWORD: 12345
+
+MINIO_URL: http://152.42.220.220:9000
+MINIO_ACCESS_KEY: tX8ST2lo1qfz4GClMv0H
+MINIO_SECRETE_KEY: jqnAdnc7YsqBqyhjsjdYkLHX5snYoRrVp1E8EiGB
+MINIO_BUCKET: minio-test-bucket-1
+
+MEDIA_SERVER_PATH: D:\\SERVER\\ITE\\
+MEDIA_BASE_URI: http://localhost:8080/media/
+

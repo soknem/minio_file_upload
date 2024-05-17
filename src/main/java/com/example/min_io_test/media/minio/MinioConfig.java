@@ -1,4 +1,4 @@
-package com.example.min_io_test.minio;
+package com.example.min_io_test.media.minio;
 
 import io.minio.MinioClient;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class MinioConfig {
     @Bean
     public MinioClient minioClient() {
         return MinioClient.builder()
-                .endpoint(minioProperties.getEndpoint())
+                .endpoint(minioProperties.getUrl())
                 .credentials(minioProperties.getAccessKey(), minioProperties.getSecretKey())
                 .build();
     }
