@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  istad:
+    container_name: 'file_api'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - TZ=Asia/Bangkok
+    ports:
+      - '3244:8888'
+    volumes:
+      - '/home/istad_lms/images:/home/istad/media'

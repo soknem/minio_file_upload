@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: min_io_test
+  profiles:
+    active: dev

@@ -1,0 +1,16 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+minio:
+  endpoint: http://152.42.220.220:9000
+  secret-key: jqnAdnc7YsqBqyhjsjdYkLHX5snYoRrVp1E8EiGB
+  bucket-name: minio-test-bucket-1
+  access-key: tX8ST2lo1qfz4GClMv0H
+springdoc:
+  swagger-ui:
+    path: /
+server:
+  port: 8888
